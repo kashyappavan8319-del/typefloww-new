@@ -1,0 +1,45 @@
+// Version: 1.0.0
+type ContentId__868183611 = Nat;
+type ContentMode__1008084284 = {#chat; #coding; #paragraph};
+type Language__641378268 = {#english; #hinglish};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type SessionId__1052913375 = Nat;
+type SessionStats__51517224 =
+  {
+    accuracy : Float;
+    difficulty : Nat;
+    id : SessionId__1052913375;
+    language : Language__641378268;
+    mistakesCount : Nat;
+    mode : ContentMode__1008084284;
+    timestamp : Timestamp__301639476;
+    wpm : Nat
+  };
+type StreakData__548721959 = {currentStreak : Nat; lastSessionDate : Text};
+type Timestamp__301639476 = Int;
+type TypingContent__634663694 =
+  {
+    category : Text;
+    difficulty : Nat;
+    id : ContentId__868183611;
+    language : Language__641378268;
+    mode : ContentMode__1008084284;
+    text : Text
+  };
+actor {
+  stable contentStore :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?TypingContent__634663694]];
+      var elementIndex : Nat__490723111
+    };
+  stable sessionState :
+    {var nextId : Nat; var streak : StreakData__548721959};
+  stable sessionStore :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?SessionStats__51517224]];
+      var elementIndex : Nat__490723111
+    }
+};

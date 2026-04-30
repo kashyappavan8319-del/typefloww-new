@@ -1,0 +1,50 @@
+type TypingContent = 
+ record {
+   category: text;
+   difficulty: nat;
+   id: ContentId;
+   language: Language;
+   mode: ContentMode;
+   "text": text;
+ };
+type Timestamp = int;
+type StreakData = 
+ record {
+   currentStreak: nat;
+   lastSessionDate: text;
+ };
+type SessionStats = 
+ record {
+   accuracy: float64;
+   difficulty: nat;
+   id: SessionId;
+   language: Language;
+   mistakesCount: nat;
+   mode: ContentMode;
+   timestamp: Timestamp;
+   wpm: nat;
+ };
+type SessionId = nat;
+type Language = 
+ variant {
+   english;
+   hinglish;
+ };
+type ContentMode = 
+ variant {
+   chat;
+   coding;
+   paragraph;
+ };
+type ContentId = nat;
+service : {
+  getContent: (mode: text, language: text, difficulty: nat) ->
+   (vec TypingContent) query;
+  getRandomContent: (mode: text, language: text, difficulty: nat) ->
+   (opt TypingContent) query;
+  getSessions: () -> (vec SessionStats) query;
+  getStreak: () -> (StreakData) query;
+  saveSession: (wpm: nat, accuracy: float64, mode: text, language: text,
+   difficulty: nat, timestamp: int, mistakesCount: nat) -> ();
+  updateStreak: (today: text) -> (StreakData);
+}

@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "General Sans";
+    --font-body: "DM Sans";
+    --font-mono: "Geist Mono";
+    --radius: 0.625rem;
+
+    /* Slate blue light palette */
+    --background: 0.97 0.012 248;
+    --foreground: 0.18 0.02 248;
+    --card: 1.0 0.0 248;
+    --card-foreground: 0.18 0.02 248;
+    --popover: 1.0 0.0 248;
+    --popover-foreground: 0.18 0.02 248;
+
+    --primary: 0.42 0.14 248;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.9 0.025 248;
+    --secondary-foreground: 0.28 0.02 248;
+    --muted: 0.92 0.018 248;
+    --muted-foreground: 0.48 0.025 248;
+
+    --accent: 0.52 0.18 248;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.9 0.022 248;
+    --input: 0.94 0.015 248;
+    --ring: 0.42 0.14 248;
+
+    --success: 0.58 0.16 145;
+    --success-foreground: 0.98 0 0;
+    --warning: 0.72 0.18 70;
+    --warning-foreground: 0.18 0.02 248;
+
+    --chart-1: 0.65 0.22 40;
+    --chart-2: 0.6 0.12 185;
+    --chart-3: 0.4 0.07 227;
+    --chart-4: 0.83 0.19 84;
+    --chart-5: 0.77 0.19 70;
+
+    --sidebar: 0.97 0.012 248;
+    --sidebar-foreground: 0.18 0.02 248;
+    --sidebar-primary: 0.42 0.14 248;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.9 0.025 248;
+    --sidebar-accent-foreground: 0.28 0.02 248;
+    --sidebar-border: 0.9 0.022 248;
+    --sidebar-ring: 0.42 0.14 248;
+  }
+
+  .dark {
+    --background: 0.11 0.022 248;
+    --foreground: 0.94 0 0;
+    --card: 0.15 0.022 248;
+    --card-foreground: 0.94 0 0;
+    --popover: 0.19 0.022 248;
+    --popover-foreground: 0.94 0 0;
+
+    --primary: 0.62 0.16 248;
+    --primary-foreground: 0.11 0.022 248;
+
+    --secondary: 0.22 0.022 248;
+    --secondary-foreground: 0.86 0 0;
+    --muted: 0.22 0.022 248;
+    --muted-foreground: 0.58 0.01 248;
+
+    --accent: 0.62 0.16 248;
+    --accent-foreground: 0.11 0.022 248;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.94 0 0;
+
+    --border: 0.21 0.022 248;
+    --input: 0.19 0.022 248;
+    --ring: 0.62 0.16 248;
+
+    --success: 0.65 0.16 145;
+    --success-foreground: 0.11 0.022 248;
+    --warning: 0.75 0.18 70;
+    --warning-foreground: 0.11 0.022 248;
+
+    --chart-1: 0.49 0.24 264;
+    --chart-2: 0.7 0.17 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.63 0.27 304;
+    --chart-5: 0.65 0.25 16;
+
+    --sidebar: 0.15 0.022 248;
+    --sidebar-foreground: 0.94 0 0;
+    --sidebar-primary: 0.62 0.16 248;
+    --sidebar-primary-foreground: 0.11 0.022 248;
+    --sidebar-accent: 0.22 0.022 248;
+    --sidebar-accent-foreground: 0.86 0 0;
+    --sidebar-border: 0.21 0.022 248;
+    --sidebar-ring: 0.62 0.16 248;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html:not(.dark) {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-colors-smooth {
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s
+      cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s
+      cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .focus-ring {
+    @apply outline-none ring-2 ring-offset-2 ring-ring ring-offset-background;
+  }
+
+  .focus-ring-dark {
+    @apply outline-none ring-2 ring-offset-2 ring-ring ring-offset-background dark:ring-offset-background;
+  }
+
+  .card-elevated {
+    @apply shadow-sm border border-border rounded-lg;
+  }
+
+  .card-surface {
+    @apply bg-card border border-border rounded-xl shadow-subtle;
+  }
+
+  .text-sm-readable {
+    @apply text-base sm:text-sm;
+  }
+
+  /* Typing word states */
+  .word-correct {
+    @apply text-foreground opacity-60;
+  }
+
+  .word-incorrect {
+    @apply text-destructive underline decoration-wavy decoration-destructive/70;
+  }
+
+  .word-current {
+    @apply bg-primary/15 text-foreground rounded px-0.5;
+  }
+
+  .word-pending {
+    @apply text-muted-foreground;
+  }
+
+  /* Cursor blink */
+  .typing-cursor {
+    @apply inline-block w-0.5 h-[1.1em] bg-primary align-text-bottom ml-0.5;
+    animation: blink 1s step-end infinite;
+  }
+
+  /* Per-character highlighting (paragraph + chat modes) */
+  .char-correct {
+    @apply text-success/80;
+  }
+
+  .char-incorrect {
+    @apply text-destructive bg-destructive/15 rounded-sm;
+  }
+
+  .char-pending {
+    @apply text-muted-foreground;
+  }
+
+  .char-cursor {
+    @apply text-foreground underline decoration-primary decoration-2 underline-offset-2;
+  }
+
+  /* Scroll utilities */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Prevent layout shift on mobile keyboard open */
+@supports (height: 100dvh) {
+  .dvh-screen {
+    height: 100dvh;
+  }
+}

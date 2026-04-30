@@ -1,0 +1,25 @@
+{
+  "overview": "A clean, modern typing practice website with real-time feedback, multiple practice modes, and a premium slate-blue design. Supports paragraph practice with difficulty levels, chat simulation, and coding mode with multilingual (English + Hinglish) content.",
+  "features": [
+    "Multiple typing modes: Paragraph (10 difficulty levels), Chat Simulation, Coding Mode",
+    "Real-time WPM and accuracy tracking with live mistake highlighting",
+    "Post-session results with error breakdown and performance timeline",
+    "Daily streak system and session history stored locally",
+    "Multilingual support: English and Hinglish",
+    "Dark/light mode toggle with persistent preference",
+    "Slate blue premium design with smooth animations and rounded UI",
+    "Mobile-optimized: natural keyboard input, no viewport shift on mobile"
+  ],
+  "category": "productivity",
+  "tags": [
+    "typing",
+    "productivity",
+    "practice",
+    "wpm",
+    "dark-mode",
+    "mobile",
+    "multilingual",
+    "hinglish"
+  ],
+  "last_updated": "2026-04-30T06:25:15.629Z"
+}
