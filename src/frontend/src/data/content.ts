@@ -3,24 +3,24 @@ import type { DifficultyLevel, Language, TypingMode } from "@/types";
 // ─── Paragraph content ────────────────────────────────────────────────────────
 const PARAGRAPH_EN: Record<DifficultyLevel, string[]> = {
   1: [
-    "The cat sat on the mat. The dog ran fast. The sun is bright today.",
-    "A bird flew past the window. Trees sway in the wind. Rain falls softly.",
-    "Milk is white. The sky is blue. Grass is green. Ice is cold.",
+    "the cat sat on the mat the dog ran fast the sun is bright today",
+    "a bird flew past the window trees sway in the wind rain falls softly",
+    "milk is white the sky is blue grass is green ice is cold",
   ],
   2: [
-    "Technology connects people across the globe, making communication faster and more accessible than ever before.",
-    "The morning light filtered through the curtains, casting gentle shadows across the wooden floor.",
-    "Every journey begins with a single step. Keep moving and you will reach your destination.",
+    "TecHnoLogY Connects People Across The Globe Making CommUnicaTion Faster And More AcCessIble Than Ever Before.",
+    "The, morning, light, filtered, through, the, Curtains, casting, gentle, shadows, across, the, wooden, floor.",
+    "Ev ry jou ney beg ns with a si gle step. Keep mo ing and you will re ch your de tina ion.",
   ],
   3: [
-    "Consistent practice builds lasting habits. Each small improvement compounds over time, creating remarkable results in the long run.",
-    "The city never sleeps, its streets humming with activity as millions of lives intersect in unexpected ways.",
-    "Reading every day sharpens your mind, expands your vocabulary, and opens doors to worlds you never knew existed.",
+    "Consistent. Practice. Builds. Lasting. Habits. Each. Small. Improvement. Compounds. Over. Time, Creating. Remarkable. Results. In. The. Long. Run.",
+    "The. City. Never. Sleeps, Its. Streets. Humming. With. Activity. As. Millions. Of. Lives. Intersect. In. Unexpected. Ways.",
+    "Reading, every. day, sharpens. your, mind, expands. your. vocabulary, and, opens. doors, to. worlds, you. never, knew. existed.",
   ],
   4: [
-    "Mastery is not achieved overnight. It requires deliberate effort, focused repetition, and the patience to embrace incremental growth through daily discipline.",
-    "Scientists have discovered that the human brain remains remarkably adaptable throughout life, capable of forming new connections given the right stimulation.",
-    "Effective communication requires not just speaking clearly but listening deeply, understanding context, and responding with thoughtfulness and precision.",
+    "Mastery  --- is not - achieved - overnight. It - requires deliberate - effort, focused - repetition, and the patience to embrace - incremental - growth through daily --- discipline.",
+    "Scientists --- have discovered - that the human brain - remains remarkably - adaptable - throughout life, capable of forming - new connections - given the right --- stimulation.",
+    "Effective --- communication - requires not just speaking - clearly but listening - deeply, understanding - context, and responding with - thoughtfulness and --- precision.",
   ],
   5: [
     "The philosophy of stoicism teaches us to distinguish between what lies within our control and what does not, finding peace through acceptance and rational action.",
@@ -56,14 +56,14 @@ const PARAGRAPH_EN: Record<DifficultyLevel, string[]> = {
 
 const PARAGRAPH_HI: Record<number, string[]> = {
   1: [
-    "Aaj mausam bahut acha hai. Chalo thoda bahar chalte hain. Ghar pe chai pite hain.",
-    "Yaar kya scene hai aaj. Sab theek hai. Chal milte hain baad mein.",
-    "Neend aa rahi hai. Kuch kha lein pehle. Phir so jaate hain.",
+    "aaj mausam bahut acha hai chalo thoda bahar chalte hain ghar pe chai pite hain",
+    "yaar kya scene hai aaj sab theek hai chal milte hain baad mein",
+    "neend aa rahi hai main sone ja rahi hu chal ab tu bhi so ja",
   ],
   2: [
-    "Kal office mein bahut kaam tha, isliye ghar late aaya. Phir bhi dinner time pe baith gaye sab log.",
-    "Dosto ke saath time spend karna bahut zaroori hai. Zindagi mein relationships sabse important hote hain.",
-    "Subah jaldi uthna mushkil hota hai but ek baar habit pad jaaye toh life bahut productive ho jaati hai.",
+    "Kal Office Mein Bahut Kaam Tha Isliye Ghar Late Aaya Phir Bhi Dinner Time Pe Baith Gaye Sab Log",
+    "Dosto, ke, saath, time, spend, karna, bahut, zaroori, hai. Zindagi, mein, relationships, sabse, important, hote, hain.",
+    "Sub.ah jaldi uthna mushkil hota hai but ek baar habit pad jaaye toh life bahut productive ho jaati hai.",
   ],
   3: [
     "Aajkal social media pe itna time waste ho jaata hai. Better hai ki koi productive kaam karo apne free time mein.",
