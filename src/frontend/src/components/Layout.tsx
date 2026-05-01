@@ -15,7 +15,7 @@ export function Layout({ children }: LayoutProps) {
           <p className="text-xs text-muted-foreground font-body">
             © {new Date().getFullYear()}. Built with love in{" "}
             <a
-              href={}
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline transition-smooth"
