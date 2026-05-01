@@ -13,16 +13,14 @@ export function Layout({ children }: LayoutProps) {
       <footer className="w-full border-t border-border bg-card py-4 mt-auto">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
           <p className="text-xs text-muted-foreground font-body">
-            © {new Date().getFullYear()}. Built with love using{" "}
+            © {new Date().getFullYear()}. Built with love in{" "}
             <a
-              href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(
-                typeof window !== "undefined" ? window.location.hostname : "",
-              )}`}
+              href={}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline transition-smooth"
             >
-              caffeine.ai
+              India🇮🇳
             </a>
           </p>
         </div>
